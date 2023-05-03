@@ -51,7 +51,22 @@ class App extends React.Component{
               </div>
             </div>
 
-            <div className="row"></div>
+            <div className="row">
+              <div className="row-12 d-flex justify-content-between">
+                <div className="d-flex">
+                <div className="icon-wrapper d-flex align-items-center">
+                <i className="bi bi-wallet"></i>
+                </div>
+                <div className="transaction">
+                  <h6>Menerima gaji</h6>
+                  <span className="title">1 july 2022</span>
+                </div>
+                </div>
+                <div className="money">
+                  <h5>Rp. 2.000.000</h5>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </>
