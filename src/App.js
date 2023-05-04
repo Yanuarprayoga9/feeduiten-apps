@@ -2,7 +2,29 @@ import React from "react";
 class App extends React.Component{
   constructor(props){
     super(props);
-    console.log("component created")
+    this.state={
+      sisaUang : 0,
+      persentaseUang : 0 ,
+      pemasukanUang : 0 ,
+      pengeluaranUang :0,
+      transaksiIN :0,
+      transaksiOut:0,
+      summary: [
+        {
+          deskripsi:"menerima gaji",
+          tanggal: '1 july 2022',
+          nominal: 10000000,
+          category : 'IN'
+        },
+        {
+          deskripsi:"makan nasi padang",
+          tanggal: '1 july 2022',
+          nominal: 20000,
+          category : 'OUT'
+        },
+      ]
+
+    }
   }
   render(){
     return (
@@ -11,7 +33,7 @@ class App extends React.Component{
           <div className="row">
             <div className="col-12 text-center">
               <h1>FEEDUITEN APPS</h1>
-              <h4>Rp. 1.500.000,-</h4>
+              <h4>Rp. {this.state.sisaUang},-</h4>
               <span className="title">Sisa uang kamu tersisa 75% lagi</span >
               <hr />
             </div>
@@ -23,7 +45,7 @@ class App extends React.Component{
                   <i className="bi bi-wallet p-1 rounded"></i>
                 </div>
               <span className="title">pemasukan</span>
-              <h3>Rp. 2.000.000,-</h3>
+              <h3>Rp. {this.state.pemasukanUang},-</h3>
               <span className="title text-ungu">50<span className="title">Transaksi</span></span>
               </div>
             </div>
@@ -33,8 +55,8 @@ class App extends React.Component{
                 <div className="icon-wrapper">
                   <i className="bi bi-wallet p-1 rounded"></i>
                 </div>
-              <span className="title">pemasukan</span>
-              <h3>Rp. 2.000.000,-</h3>
+              <span className="title">Pengeluaran</span>
+              <h3>Rp. {this.state.pengeluaranUang},-</h3>
               <span className="title text-ungu">50<span className="title">Transaksi</span></span>
               </div>
             </div>
